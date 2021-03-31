@@ -1,0 +1,36 @@
+{% extends './base.html'%}
+
+<!--Traemos el blocke del title-->
+{%block title%} Lenguajes de Programacion {%endblock%}
+
+
+<!--Traemos el body-->
+{%block body%}
+<div class="row">
+    <div class="col-md-6 offset-md-3"> <!--Estilo de la tabla-->
+        <h1>Lenguajes de Programación</h1>
+        <div class="table-responsive">
+            <table class="table table-striped"> <!-- Tabla-->
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for leng in lenguajes%}
+                    <tr>
+                        <td>{{loop.index}}</td> <!-- loop.index hace el conteo en bajada de la tabla-->
+                        <td>{{leng}}</td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</div>
+
+
+{%endblock%}
